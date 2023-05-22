@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 
-const App = () => {
+const AppUseEffect = () => {
   const [value, setValue] = useState(0);
 
   useEffect(() => {

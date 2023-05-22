@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const App = () => {
+const AppUseState = () => {
   const [value, setValue] = useState(0);
 
   return (
