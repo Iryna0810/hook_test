@@ -44,9 +44,6 @@ export const AppUseState = () => {
   }, [password]);
 
 
-
-
-
   return (
     <div>
       {value}
