@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
+import css from "../feedback.module.css"
+// import '../styles.css';
 
-const AppUseEffect = () => {
+export const AppUseEffect = () => {
   const [value, setValue] = useState(0);
 
   useEffect(() => {
@@ -10,7 +12,7 @@ const AppUseEffect = () => {
   return (
     <div>
       <p>You clicked {value} times</p>
-      <button onClick={() => setValue(value + 1)}>Click me</button>
+      <button className={css.button} onClick={() => setValue(value + 1)}>Click me</button>
     </div>
   );
 };
