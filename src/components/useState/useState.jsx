@@ -2,13 +2,23 @@ import { useEffect, useState } from "react";
 import css from "../feedback.module.css";
 // import '../styles.css'
 
+const useLocalStorage = (key, defaultValue) => {
+  const [state, setState] = useState(() => {
+    return JSON.parse(window.localStorage.getItem(key)) ?? defaultValue;
+  });
+
+  useEffect(() => {
+    window.localStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
+  return [state, setState];
+}
+
 export const AppUseState = () => {
   const [value, setValue] = useState(0);
 
-  const [email, setEmail] = useState(() => {
-    return JSON.parse(window.localStorage.getItem("email")) ?? "";
-  });
-  const [password, setPassword] = useState(() => { return JSON.parse(window.localStorage.getItem("password")) ?? ""; });
+  const [email, setEmail] = useLocalStorage("email", "");
+  const [password, setPassword] = useLocalStorage("password", "");
+
 
   // const handleEmailChange = event => {
   //   setEmail(event.target.value)
