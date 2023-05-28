@@ -3,8 +3,9 @@ import { FeedbackOptions } from "./Feedback/Feedback";
 import { Statistic } from "./Statistic/Statistic";
 import { Title } from "./Title/Title";
 import { AppUseState } from './useState/useState'
-import {AppUseEffect} from './useEffect/useEffect'
-
+import { AppUseEffect } from './useEffect/useEffect';
+import {Clock} from './Clock/Clock'
+// import css from "../feedback.module.css";
 
 
 export function App () {
@@ -82,7 +83,8 @@ export function App () {
                 total={total}
                 positiveFeedback = {positivePercentage}
         />
-        </Title>
+      </Title>
+      <Clock></Clock>
     </div>
     )
 

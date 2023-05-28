@@ -65,6 +65,7 @@ export const AppUseState = () => {
         <label htmlFor="">
         <span>Email</span>
           <input
+            autoComplete="off"
             className={css.search_form_input}
             type="email"
             name="email"
@@ -75,6 +76,7 @@ export const AppUseState = () => {
         <label htmlFor="">
         <span>Password</span>
           <input
+            autoComplete="off"
             className={css.search_form_input}
             type="password"
             name="password"
